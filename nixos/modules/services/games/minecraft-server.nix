@@ -34,7 +34,7 @@ let
 
   # To be able to open the firewall, we need to read out port values in the
   # server properties, but fall back to the defaults when those don't exist.
-  # These defaults are from https://minecraft.gamepedia.com/Server.properties#Java_Edition_3
+  # These defaults are from https://minecraft.wiki/w/Server.properties
   defaultServerPort = 25565;
 
   serverPort = cfg.serverProperties.server-port or defaultServerPort;
@@ -132,8 +132,8 @@ in {
         example = literalExpression ''
           {
             server-port = 43000;
-            difficulty = 3;
-            gamemode = 1;
+            difficulty = "hard";
+            gamemode = "creative";
             max-players = 5;
             motd = "NixOS Minecraft server!";
             white-list = true;
@@ -145,7 +145,7 @@ in {
           Minecraft server properties for the server.properties file. Only has
           an effect when {option}`services.minecraft-server.declarative`
           is set to `true`. See
-          <https://minecraft.gamepedia.com/Server.properties#Java_Edition_3>
+          <https://minecraft.wiki/w/Server.properties>
           for documentation on these values.
         '';
       };
