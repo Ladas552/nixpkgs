@@ -27,6 +27,18 @@ final: prev:
     meta.homepage = "https://github.com/vim-scripts/BufOnly.vim/";
   };
 
+  care-nvim = buildVimPlugin {
+    pname = "care.nvim";
+    version = "2024-10-20";
+    src = fetchFromGitHub {
+      owner = "max397574";
+      repo = "care.nvim";
+      rev = "5832a344f180ce6fd60b788da73300250a5fa789";
+      sha256 = "01n9dqj1rhk6p12r9zrj621pgb37k25vhqzx0b3784kism1da4aj";
+    };
+    meta.homepage = "https://github.com/max397574/care.nvim/";
+  };
+
   ChatGPT-nvim = buildVimPlugin {
     pname = "ChatGPT.nvim";
     version = "2024-10-12";
