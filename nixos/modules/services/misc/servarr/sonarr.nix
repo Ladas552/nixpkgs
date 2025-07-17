@@ -35,13 +35,13 @@ in
       user = lib.mkOption {
         type = lib.types.str;
         default = "sonarr";
-        description = "User account under which Sonaar runs.";
+        description = "User account under which Sonarr runs.";
       };
 
       group = lib.mkOption {
         type = lib.types.str;
         default = "sonarr";
-        description = "Group under which Sonaar runs.";
+        description = "Group under which Sonarr runs.";
       };
 
       package = lib.mkPackageOption pkgs "sonarr" { };
